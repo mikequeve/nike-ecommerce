@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIKE - CONCEPT PROJECT</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site__header">
+      <article class="container d-flex between">
+        <a href="index.html" class="site__logo"
+          ><img src="assets/logos/001_nike-logos-swoosh-black.png" alt="logo nike"
+        /></a>
+        <div class="site__menu d-flex">
+          <nav class="site__nav d-flex">
+            <a href="index.html" class="nav__link">HOME</a>
+          </nav>
+          <a href="#" class="menu__btn"
+            ><img src="assets/logos/menu-icon.png" alt=""
+          /></a>
+        </div>
+      </article>
+    </header>
+    <main>
+      <section class="cart__section">
+        <article class="container d-flex">
+          <div class="d-flex order__details">
+            <h2>ORDER DETAILS</h2>
+            <hr />
+            <form method="post" class="order__details-form d-flex">
+              <div class="d-flex form-space">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="client"
+                  title="Only letters and white spaces"
+                  pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                  required
+                />
+              </div>
+              <div class="d-flex form-space">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email-field"
+                  id="email"
+                  title="Wrong email"
+                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                  required
+                />
+              </div>
+              <div class="d-flex form-space">
+                <label for="name">Direction</label>
+                <input type="text" name="direction" id="direction" />
+              </div>
+              <div class="d-flex form-space">
+                <label for="name">Home Delivery?</label>
+                <select id="delivery-form">
+                  <option selected value="0">Choose an Option</option>
+                  <option value="5">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+              <div class="d-flex payment__details">
+                <h2>PAYMENT DETAILS</h2>
+                <hr />
+                <article class="d-flex">
+                  <div class="d-flex form-space cards-container">
+                    <h3>Choose payment method</h3>
+                    <div class="d-flex center-align check-box-container">
+                      <div class="d-flex form-space-check">
+                        <input type="radio" name="card-check" id="visa" value="option1" />
+                        <label for="visa"
+                          ><img src="assets/img/cc-visa.svg" alt=""
+                        /></label>
+                      </div>
+                      <div class="d-flex form-space-check">
+                        <input
+                          type="radio"
+                          name="card-check"
+                          id="mastercard"
+                          value="option2"
+                        />
+                        <label for="mastercard"
+                          ><img src="assets/img/cc-mastercard.svg" alt=""
+                        /></label>
+                      </div>
+                      <div class="d-flex form-space-check">
+                        <input
+                          type="radio"
+                          name="card-check"
+                          id="paypal"
+                          value="option3"
+                        />
+                        <label for="paypal"
+                          ><img src="assets/img/cc-paypal.svg" alt=""
+                        /></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex form-space">
+                    <label for="card">Card Number</label>
+                    <input
+                      type="text"
+                      name="card-number"
+                      id="card"
+                      placeholder="####-####-####-####"
+                      pattern="^(?:\d{4}[-\s]?){3}\d{4}$"
+                      title="4 groups of numbers 0 - 9 separated by a hyphen"
+                      required
+                    />
+                  </div>
+                  <div class="d-flex form-space">
+                    <label for="exp-date">Expiration Date</label>
+                    <input
+                      type="text"
+                      name="exp-date"
+                      id="exp"
+                      placeholder="## / ##"
+                      pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+                      title="The exp-date format is incorrect"
+                      required
+                    />
+                  </div>
+                  <div class="d-flex form-space">
+                    <label for="ccv-number">CCV</label>
+                    <input
+                      type="text"
+                      name="ccv-number"
+                      id="ccv"
+                      placeholder="###"
+                      pattern="^\d{3}$"
+                      title="Invalid CCV number"
+                      required
+                    />
+                  </div>
+                </article>
+              </div>
+              <div class="btn-container">
+                <a id="process-purchase" class="button">Purchase</a>
+              </div>
+            </form>
+          </div>
+          <div class="d-flex products__details">
+            <h2>SELECTED PRODUCTS</h2>
+            <hr />
+            <div id="purchase-list">
+              <article class="cart_products-container"></article>
+            </div>
+            <div class="order__prices">
+              <div class="d-flex price__container">
+                <h5>Subtotal</h5>
+                <p id="subtotal"></p>
+              </div>
+              <div class="d-flex price__container">
+                <h5>Delivery</h5>
+                <p id="delivery"></p>
+              </div>
+              <div class="d-flex price__container">
+                <h5>Total</h5>
+                <input type="text" id="total" name="total" readonly />
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="site__footer">
+      <article class="container d-flex center-align">
+        <a href="#" class="site__logo"
+          ><img src="assets/logos/002_nike-logos-swoosh-white.png" alt="logo nike"
+        /></a>
+        <div class="social__media d-flex">
+          <a href="#" class="social__icon"
+            ><img src="assets/logos/facebook.png" alt=""
+          /></a>
+          <a href="#" class="social__icon"
+            ><img src="assets/logos/instagram.png" alt=""
+          /></a>
+          <a href="#" class="social__icon"
+            ><img src="assets/logos/youtube.png" alt=""
+          /></a>
+        </div>
+      </article>
+    </footer>
+    <script type="module" src="js/purchase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
