@@ -46,7 +46,7 @@ export class Cart {
       <img src="${product.img}" alt="sneaker image" width="50px">
       <h4>${product.title}</h4>
       <p>$ ${product.price}</p>
-      <a data-id="${product.id}"><img src="../assets/logos/delete_icon.png" alt="" class="delete__product" ></a>
+      <a data-id="${product.id}"><img src="../assets/logos/delete-icon.png" alt="" class="delete__product" ></a>
     </aside>
     `;
     $productsList.appendChild($row);
@@ -103,7 +103,7 @@ export class Cart {
           <img src="${product.img}" alt="sneaker image" width="50px">
           <h4>${product.title}</h4>
           <p>$${product.price}</p>
-          <a data-id="${product.id}"><img src="../assets/logos/delete_icon.png" alt="" class="delete__product"></a>
+          <a data-id="${product.id}"><img src="../assets/logos/delete-icon.png" alt="" class="delete__product"></a>
         </aside>
       `;
       $productsList.appendChild($row);
@@ -120,7 +120,7 @@ export class Cart {
           <img src="${product.img}" alt="sneaker image" width="50px">
           <h4>${product.title}</h4>
           <p>$${product.price}</p>
-          <a data-id="${product.id}"><img src="../assets/logos/delete_icon.png" alt="" class="delete__product"></a>
+          <a data-id="${product.id}"><img src="../assets/logos/delete-icon.png" alt="" class="delete__product"></a>
         </aside>
       `;
       $purchaseList.appendChild($row);
