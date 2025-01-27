@@ -51,6 +51,14 @@ export class Cart {
     `;
     $productsList.appendChild($row);
     this.saveProductLS(product);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Great choice!',
+      text: 'Product added to cart correctly...',
+      showConfirmButton: false,
+      timer: 2500,
+    });
   }
 
   deleteProduct(e) {
