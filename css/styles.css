@@ -281,6 +281,7 @@ a {
   padding: 0.1rem;
   background-color: var(--action-color);
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .btn__container {
