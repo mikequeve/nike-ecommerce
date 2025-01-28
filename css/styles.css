@@ -273,9 +273,14 @@ a {
   text-align: center;
 }
 
-.delete__product {
-  cursor: pointer;
-  width: 1.2rem;
+.product__row a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  padding: 0.1rem;
+  background-color: var(--action-color);
+  border-radius: 100px;
 }
 
 .btn__container {
